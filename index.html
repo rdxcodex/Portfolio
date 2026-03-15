@@ -15,12 +15,12 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+      font-family: "Poppins", sans-serif;
     }
 
     body {
       background: #0f172a;
-      color: white;
+      color: #fff;
       line-height: 1.6;
     }
 
@@ -44,28 +44,6 @@
       font-size: 18px;
       max-width: 700px;
       margin: 0 auto;
-    }
-
-    .cta,
-    .demo-card a,
-    .contact-links a {
-      display: inline-block;
-      padding: 12px 28px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .cta {
-      margin-top: 25px;
-      background: #38bdf8;
-      color: #000;
-    }
-
-    .cta:hover,
-    .cta:focus {
-      background: #0ea5e9;
-      transform: translateY(-2px);
     }
 
     .section {
@@ -109,14 +87,30 @@
       margin-bottom: 20px;
     }
 
+    .demo-card a,
+    .demo-unavailable,
+    .contact-links a {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
     .demo-card a {
       background: #22c55e;
-      color: white;
+      color: #fff;
     }
 
     .demo-card a:hover,
     .demo-card a:focus {
       background: #16a34a;
+    }
+
+    .demo-unavailable {
+      background: #475569;
+      color: #e2e8f0;
+      cursor: not-allowed;
     }
 
     .contact-section {
@@ -138,7 +132,7 @@
     .contact-links a {
       padding: 12px 20px;
       background: #22c55e;
-      color: white;
+      color: #fff;
     }
 
     .contact-links a:hover,
@@ -191,15 +185,6 @@
   <header>
     <h1>Raksh Web Studio</h1>
     <p>I build modern, fast and mobile-friendly websites for businesses.</p>
-
-    <a
-      class="cta"
-      href="https://urban-spices.netlify.app/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      View Restaurant Demo
-    </a>
   </header>
 
   <section class="section">
@@ -235,6 +220,15 @@
         >
           Open Live Demo
         </a>
+      </div>
+
+      <div class="demo-card">
+        <h3>CityCare Clinic - Medical Website</h3>
+        <p>
+          A modern healthcare website designed for clinics and private hospitals
+          to showcase doctors, services, and allow patients to book appointments online.
+        </p>
+        <span class="demo-unavailable">Demo Link Coming Soon</span>
       </div>
     </div>
   </section>

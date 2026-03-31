@@ -404,6 +404,7 @@ select {
 .hero-metrics,
 .service-grid,
 .project-grid,
+.pricing-grid,
 .contact-cards {
   display: grid;
   gap: 1rem;
@@ -517,6 +518,154 @@ select {
 .service-card {
   padding: 1.5rem;
   border-radius: var(--radius-md);
+}
+
+.pricing {
+  padding-top: 1.2rem;
+}
+
+.pricing-wrap {
+  display: grid;
+  gap: 2rem;
+}
+
+.pricing-heading {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.pricing-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.pricing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1.7rem;
+  border: 1px solid var(--line);
+  border-radius: 1.7rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent),
+    var(--panel);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover,
+.pricing-card:focus-within {
+  transform: translateY(-8px);
+  border-color: rgba(141, 242, 194, 0.34);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.38);
+}
+
+.pricing-card-featured {
+  transform: translateY(-12px) scale(1.02);
+  border-color: rgba(141, 242, 194, 0.42);
+  background:
+    linear-gradient(180deg, rgba(141, 242, 194, 0.14), rgba(125, 183, 255, 0.05)),
+    var(--panel-strong);
+}
+
+.pricing-card-featured:hover,
+.pricing-card-featured:focus-within {
+  transform: translateY(-18px) scale(1.02);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -0.85rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  color: #07101a;
+  background: linear-gradient(135deg, var(--accent), #f6ffe5);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 14px 30px rgba(49, 213, 157, 0.22);
+}
+
+.pricing-card-top {
+  margin-bottom: 1.2rem;
+}
+
+.pricing-plan {
+  margin: 0 0 0.65rem;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.pricing-card h3 {
+  margin: 0;
+  font-family: "Sora", sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+}
+
+.pricing-subtitle,
+.pricing-note {
+  color: var(--muted);
+}
+
+.pricing-subtitle {
+  margin: 0.9rem 0 0;
+}
+
+.pricing-features {
+  display: grid;
+  gap: 0.85rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pricing-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--soft);
+}
+
+.feature-icon {
+  position: relative;
+  flex: 0 0 1.3rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-top: 0.05rem;
+  border-radius: 999px;
+  background: rgba(141, 242, 194, 0.12);
+  border: 1px solid rgba(141, 242, 194, 0.3);
+}
+
+.feature-icon::before {
+  content: "";
+  position: absolute;
+  left: 0.32rem;
+  top: 0.23rem;
+  width: 0.34rem;
+  height: 0.62rem;
+  border-right: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
+  transform: rotate(45deg);
+}
+
+.pricing-btn {
+  width: 100%;
+  margin-top: auto;
+}
+
+.pricing-note {
+  margin: 0;
+  text-align: center;
+  font-size: 0.98rem;
 }
 
 .service-card h3,
@@ -760,6 +909,10 @@ select {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .hero-panel {
     max-width: 780px;
   }
@@ -814,6 +967,7 @@ select {
 
   .hero-trust,
   .hero-metrics,
+  .pricing-grid,
   .project-grid,
   .contact-cards {
     grid-template-columns: 1fr;
@@ -823,6 +977,12 @@ select {
   .footer-wrap {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .pricing-card-featured,
+  .pricing-card-featured:hover,
+  .pricing-card-featured:focus-within {
+    transform: none;
   }
 }
 
